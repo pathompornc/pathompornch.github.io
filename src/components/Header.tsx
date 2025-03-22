@@ -1,9 +1,11 @@
-
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const Header = () => {
+// Add type for className function
+type NavLinkClassName = ({ isActive }: { isActive: boolean }) => string;
+
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,7 +33,7 @@ const Header = () => {
           to="/" 
           className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity"
         >
-          John Doe
+          Patt Chokchainant
         </NavLink>
 
         {/* Desktop Navigation */}

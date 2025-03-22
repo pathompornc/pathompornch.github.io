@@ -12,7 +12,7 @@ const HeroSection = () => {
             Product Manager in AI/ML
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight">
-            John Doe
+            Patt Chokchainant
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
             Transforming business challenges into elegant AI-powered solutions. With 5 years of experience in ecommerce and fintech.
