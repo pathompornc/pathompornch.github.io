@@ -1,9 +1,9 @@
 
 export const experienceData = [
   {
-    company: "TechInnovate AI",
-    position: "Senior Product Manager, AI Solutions",
-    period: "2021 - Present",
+    company: "SCB 10X (Siam Commercial Bank AI Innovation Lab)",
+    position: "AI Product Manager",
+    period: "2022 - 2024",
     description: [
       "Lead the development of AI-powered products that help businesses automate processes and extract insights from complex data.",
       "Coordinate cross-functional teams of data scientists, engineers, and designers to deliver innovative solutions that solve real business problems.",
@@ -12,9 +12,9 @@ export const experienceData = [
     logo: "https://images.unsplash.com/photo-1518770660439-4636190af475"
   },
   {
-    company: "FinEdge",
+    company: "Finnomena",
     position: "Product Manager",
-    period: "2019 - 2021",
+    period: "2021 - 2022",
     description: [
       "Managed the development of a financial analytics platform that helped users make data-driven investment decisions.",
       "Implemented machine learning algorithms to detect market trends and provide personalized investment recommendations.",
@@ -23,9 +23,9 @@ export const experienceData = [
     logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   },
   {
-    company: "GlobalCommerce",
-    position: "Associate Product Manager",
-    period: "2017 - 2019",
+    company: "Sertis",
+    position: "Product Manager",
+    period: "2019 - 2021",
     description: [
       "Developed and launched a recommendation engine that increased average order value by 25% and improved customer retention.",
       "Conducted user research and A/B testing to optimize the customer journey and improve conversion rates.",

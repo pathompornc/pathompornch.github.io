@@ -1,33 +1,23 @@
 
 export const educationData = [
   {
-    school: "Stanford University",
-    degree: "Master of Science in Computer Science, AI Specialization",
-    period: "2015 - 2017",
-    extracurriculars: [
-      "Artificial Intelligence Research Lab",
-      "Product Management Club, Vice President",
-      "Tech for Social Good Initiative"
-    ],
+    school: "University of Washington",
+    degree: "Master of Science in Information Management",
+    major: "Data Science & AI",
+    period: "2024 - 2025",
     awards: [
-      "Outstanding Graduate Student Award",
-      "AI Innovation Challenge Winner"
+      "Dean's Scholarship for Academic Excellence"
     ],
-    logo: "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Washington_Huskies_logo.svg/2560px-Washington_Huskies_logo.svg.png"
   },
   {
-    school: "University of California, Berkeley",
-    degree: "Bachelor of Science in Business Administration",
-    period: "2011 - 2015",
-    extracurriculars: [
-      "Entrepreneurship Association",
-      "Data Science Club",
-      "Varsity Tennis Team"
-    ],
+    school: "Chulalongkorn University",
+    degree: "Bachelor of Business Administration (First Class Honors)",
+    major: "Finance & Accounting",
+    period: "2015 - 2019",
     awards: [
-      "Dean's List (All Semesters)",
-      "Outstanding Leadership Award"
+      "Full Scholarship for Academic Excellence",
     ],
-    logo: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_of_Chulalongkorn_University.svg/1200px-Logo_of_Chulalongkorn_University.svg.png"
   }
 ];
