@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-6 md:items-end">
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/pathompornc" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/pathompornc" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
@@ -37,7 +37,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:contact@example.com" 
+                href="mailto:ch.pathomporn@gmail.com" 
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
                 aria-label="Email"
               >
@@ -46,24 +46,16 @@ const Footer = () => {
             </div>
             
             <div className="text-muted-foreground">
-              <p>contact@example.com</p>
+              <p>ch.pathomporn@gmail.com</p>
             </div>
           </div>
         </div>
         
         <div className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Pathomporn Chokchainant. All rights reserved.
           </div>
-          
-          <div className="flex space-x-6 text-sm">
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
-            </Link>
-          </div>
+
         </div>
       </div>
     </footer>

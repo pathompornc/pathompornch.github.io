@@ -31,7 +31,7 @@ const Header = () => {
           to="/" 
           className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity"
         >
-          John Doe
+          Pathomporn Chokchainant
         </NavLink>
 
         {/* Desktop Navigation */}

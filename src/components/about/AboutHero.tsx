@@ -9,7 +9,7 @@ const AboutHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 animate-on-scroll">
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
-              John Doe
+              Patt Chokchainant
             </h1>
             <div className="text-xl text-muted-foreground space-y-4 mb-8">
               <p>
@@ -70,7 +70,7 @@ const AboutHero = () => {
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                alt="John Doe"
+                alt="Patt Chokchainant"
                 className="rounded-xl shadow-md w-full h-auto object-cover"
               />
             </div>

@@ -9,13 +9,13 @@ const HeroSection = () => {
       <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 pt-20">
         <div className="space-y-6 lg:space-y-8 animate-on-scroll">
           <span className="inline-block text-sm md:text-base bg-primary/10 text-primary px-4 py-1 rounded-full">
-            Product Manager in AI/ML
+            AI/MLProduct Manager
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight">
-            John Doe
+            Patt Chokchainant
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
-            Transforming business challenges into elegant AI-powered solutions. With 5 years of experience in ecommerce and fintech.
+            Transforming business challenges into scalable and user-centric AI/ML products. With 5 years of experience in ecommerce and fintech.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button 
@@ -47,13 +47,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-        <div className="flex flex-col items-center">
-          <span className="text-sm text-muted-foreground mb-2">Scroll Down</span>
-          <ArrowDown size={20} className="text-primary" />
-        </div>
-      </div>
     </section>
   );
 };
