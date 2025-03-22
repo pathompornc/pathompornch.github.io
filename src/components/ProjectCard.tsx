@@ -1,4 +1,3 @@
-
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Badge from './Badge';
@@ -6,14 +5,13 @@ import Badge from './Badge';
 interface ProjectCardProps {
   id: string;
   title: string;
-  company: string;
-  logo: string;
+  coverPhoto: string;
   description: string;
   industry: string;
   skills: string[];
 }
 
-const ProjectCard = ({ id, title, company, logo, description, industry, skills }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, coverPhoto, description, industry, skills }: ProjectCardProps) => {
   return (
     <Link 
       to={`/projects/${id}`}
@@ -22,8 +20,8 @@ const ProjectCard = ({ id, title, company, logo, description, industry, skills }
       <div className="glass-card rounded-xl overflow-hidden transition-all duration-300 group-hover:shadow-md">
         <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
           <img 
-            src={logo} 
-            alt={`${company} logo`} 
+            src={coverPhoto} 
+            alt={title} 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -33,7 +31,6 @@ const ProjectCard = ({ id, title, company, logo, description, industry, skills }
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-xl font-medium group-hover:text-primary transition-colors">{title}</h3>
-              <p className="text-muted-foreground">{company}</p>
             </div>
             <span className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 opacity-0 group-hover:opacity-100 transition-opacity">
               <ArrowUpRight size={16} />

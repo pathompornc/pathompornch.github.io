@@ -33,7 +33,7 @@ const Header: React.FC = () => {
           to="/" 
           className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity"
         >
-          John Doe
+          Patt Chokchainant
         </NavLink>
 
         {/* Desktop Navigation */}

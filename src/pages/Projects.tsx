@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ProjectCard';
@@ -45,7 +44,7 @@ const Projects = () => {
       <div className="container-custom">
         <SectionTitle 
           title="My Projects" 
-          subtitle="A showcase of my work as a Product Manager in AI/ML, ecommerce, and fintech"
+          subtitle="A showcase of my work in AI/ML, Language Technology, and Product Development"
           className="animate-on-scroll"
         />
         
@@ -55,9 +54,8 @@ const Projects = () => {
               <ProjectCard 
                 id={project.id}
                 title={project.title}
-                company={project.company}
-                logo={project.logo}
-                description={project.context.substring(0, 150) + '...'}
+                coverPhoto={project.coverPhoto}
+                description={project.context}
                 industry={project.industry}
                 skills={project.skills}
               />
