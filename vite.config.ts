@@ -19,8 +19,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/', 
+  base: '/pathompornch.github.io/',
   build: {
     outDir: 'dist',
+    sourcemap: true,
   },
 }));
