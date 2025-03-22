@@ -11,8 +11,7 @@ type ButtonBaseProps = {
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  href?: string;
-  to?: string;
+  className?: string;
 };
 
 // Button element specific props
@@ -39,13 +38,11 @@ type ButtonAsRouterLinkProps = ButtonBaseProps &
 type ButtonProps = ButtonAsButtonProps | ButtonAsAnchorProps | ButtonAsRouterLinkProps;
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
-  className,
   variant = 'primary',
   size = 'md',
   isLoading = false,
   leftIcon,
   rightIcon,
-  disabled,
   children,
   as,
   ...props
@@ -67,7 +64,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
     'relative inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
     variants[variant],
     sizes[size],
-    className
+    (props as any).className
   );
   
   // Content with loading indicator and icons
@@ -92,7 +89,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
       <Link
         className={baseClasses}
         ref={ref as React.Ref<HTMLAnchorElement>}
-        {...props}
+        {...(props as LinkProps)}
       >
         {content}
       </Link>
@@ -105,7 +102,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
       <a
         className={baseClasses}
         ref={ref as React.Ref<HTMLAnchorElement>}
-        {...props}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {content}
       </a>
@@ -116,9 +113,9 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
   return (
     <button
       className={baseClasses}
-      disabled={isLoading || disabled}
+      disabled={isLoading || (props as ButtonHTMLAttributes<HTMLButtonElement>).disabled}
       ref={ref as React.Ref<HTMLButtonElement>}
-      {...props}
+      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {content}
     </button>

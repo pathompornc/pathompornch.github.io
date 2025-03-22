@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -124,7 +125,6 @@ const About = () => {
                   alt="John Doe"
                   className="rounded-xl shadow-md w-full h-auto object-cover"
                 />
-                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary rounded-xl z-0" />
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ const About = () => {
       </section>
       
       {/* Certifications Section */}
-      <section className="section bg-gray-50 dark:bg-gray-900">
+      <section className="section bg-silkyIvory dark:bg-deepUmber/90">
         <div className="container-custom">
           <SectionTitle 
             title="Certifications" 
@@ -180,7 +180,7 @@ const About = () => {
       </section>
       
       {/* Education Section */}
-      <section className="section bg-gray-50 dark:bg-gray-900">
+      <section className="section bg-silkyIvory dark:bg-deepUmber/90">
         <div className="container-custom">
           <SectionTitle 
             title="Education" 
@@ -248,18 +248,18 @@ const About = () => {
       </section>
       
       {/* Contact CTA Section */}
-      <section className="section bg-gray-900 text-white">
+      <section className="section bg-warmSandstone text-white">
         <div className="container-custom text-center max-w-3xl py-16">
           <div className="animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-medium mb-6">Let's Connect</h2>
-            <p className="text-gray-300 text-lg mb-8">
+            <p className="text-white/80 text-lg mb-8">
               I'm always open to discussing product strategy, AI/ML opportunities, or potential collaborations.
             </p>
             <Button 
               as="a" 
               href="mailto:contact@example.com"
               size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100"
+              className="bg-white text-warmSandstone hover:bg-white/90"
             >
               Get in Touch
             </Button>

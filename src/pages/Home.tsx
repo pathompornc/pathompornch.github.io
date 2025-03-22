@@ -82,7 +82,6 @@ const Home = () => {
                 className="rounded-xl shadow-lg object-cover h-96 md:h-[500px] w-full"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-primary rounded-xl z-0" />
           </div>
         </div>
         
@@ -96,7 +95,7 @@ const Home = () => {
       </section>
       
       {/* Featured Projects Section */}
-      <section className="section bg-gray-50 dark:bg-gray-900 py-20 md:py-32">
+      <section className="section bg-silkyIvory dark:bg-deepUmber/90 py-20 md:py-32">
         <div className="container-custom">
           <SectionTitle 
             title="Featured Projects" 
@@ -193,11 +192,11 @@ const Home = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="section bg-gray-900 text-white">
+      <section className="section bg-warmSandstone/90 text-white">
         <div className="container-custom text-center max-w-3xl py-16 md:py-24">
           <div className="animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-medium mb-6">Let's create something amazing together</h2>
-            <p className="text-gray-300 text-lg mb-8">
+            <p className="text-white/80 text-lg mb-8">
               Whether you're looking to innovate with AI/ML or optimize your digital product strategy, I'm here to help.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -205,7 +204,6 @@ const Home = () => {
                 as={Link} 
                 to="/about"
                 rightIcon={<ArrowRight size={16} />}
-                className="bg-white text-gray-900 hover:bg-gray-100"
                 size="lg"
               >
                 Get in Touch

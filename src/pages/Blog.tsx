@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar } from 'lucide-react';
@@ -54,14 +55,14 @@ const Blog = () => {
               to={`/blog/${post.id}`} 
               className="group animate-on-scroll"
             >
-              <div className="glass-card rounded-xl overflow-hidden transition-all duration-300 group-hover:shadow-md h-full">
-                <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+              <div className="glass-card rounded-xl overflow-hidden transition-all duration-300 group-hover:shadow-md h-full border border-warmSandstone/10">
+                <div className="aspect-video bg-silkyIvory dark:bg-deepUmber/30 relative overflow-hidden">
                   <img 
                     src={post.cover} 
                     alt={post.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deepUmber/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
                 <div className="p-6 flex flex-col h-[calc(100%-33.33%)]">
@@ -70,10 +71,10 @@ const Blog = () => {
                     <span>{post.date}</span>
                   </div>
                   
-                  <h3 className="text-xl md:text-2xl font-medium group-hover:text-primary transition-colors mb-2">{post.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-medium group-hover:text-warmSandstone transition-colors mb-2">{post.title}</h3>
                   <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
                   
-                  <div className="flex items-center text-primary">
+                  <div className="flex items-center text-warmSandstone">
                     <span className="mr-1">Read more</span>
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   </div>
