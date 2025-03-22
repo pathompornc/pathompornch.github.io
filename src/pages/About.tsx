@@ -1,12 +1,11 @@
-
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Download, 
   Linkedin, 
-  GitHub, 
+  Github, 
   FileText,
-  Calendar 
+  ArrowRight
 } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
@@ -96,7 +95,7 @@ const About = () => {
                   LinkedIn
                 </Button>
                 <Button 
-                  leftIcon={<GitHub size={16} />}
+                  leftIcon={<Github size={16} />}
                   variant="outline"
                   as="a" 
                   href="https://github.com"

@@ -1,17 +1,44 @@
 
-import { forwardRef, ButtonHTMLAttributes } from 'react';
+import { forwardRef, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+// Combined props for both button and anchor elements
+type ButtonBaseProps = {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-}
+  href?: string;
+  to?: string;
+};
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
+// Button element specific props
+type ButtonAsButtonProps = ButtonBaseProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    as?: 'button';
+  };
+
+// Anchor element specific props
+type ButtonAsAnchorProps = ButtonBaseProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & {
+    as: 'a';
+    href: string;
+  };
+
+// React Router Link specific props
+type ButtonAsRouterLinkProps = ButtonBaseProps &
+  Omit<LinkProps, 'className'> & {
+    as: typeof Link;
+    to: string;
+  };
+
+// Combined type for the Button component
+type ButtonProps = ButtonAsButtonProps | ButtonAsAnchorProps | ButtonAsRouterLinkProps;
+
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
   className,
   variant = 'primary',
   size = 'md',
@@ -20,6 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   rightIcon,
   disabled,
   children,
+  as,
   ...props
 }, ref) => {
   const variants = {
@@ -34,19 +62,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     md: 'h-10 px-4',
     lg: 'h-11 px-6',
   };
-
-  return (
-    <button
-      ref={ref}
-      disabled={isLoading || disabled}
-      className={cn(
-        'relative inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
-        variants[variant],
-        sizes[size],
-        className
-      )}
-      {...props}
-    >
+  
+  const baseClasses = cn(
+    'relative inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+    variants[variant],
+    sizes[size],
+    className
+  );
+  
+  // Content with loading indicator and icons
+  const content = (
+    <>
       {isLoading && (
         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
       )}
@@ -57,6 +83,44 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       {!isLoading && rightIcon && (
         <span className="ml-2">{rightIcon}</span>
       )}
+    </>
+  );
+
+  // Render as React Router Link
+  if (as === Link && 'to' in props) {
+    return (
+      <Link
+        className={baseClasses}
+        ref={ref as React.Ref<HTMLAnchorElement>}
+        {...props}
+      >
+        {content}
+      </Link>
+    );
+  }
+  
+  // Render as anchor tag
+  if (as === 'a' && 'href' in props) {
+    return (
+      <a
+        className={baseClasses}
+        ref={ref as React.Ref<HTMLAnchorElement>}
+        {...props}
+      >
+        {content}
+      </a>
+    );
+  }
+  
+  // Render as button (default)
+  return (
+    <button
+      className={baseClasses}
+      disabled={isLoading || disabled}
+      ref={ref as React.Ref<HTMLButtonElement>}
+      {...props}
+    >
+      {content}
     </button>
   );
 });

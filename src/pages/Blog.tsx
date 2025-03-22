@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar } from 'lucide-react';
@@ -7,12 +6,9 @@ import Button from '@/components/Button';
 import { blogData } from '@/data/blog';
 
 const Blog = () => {
-  // Reference for scrolling animation
   const animatedElementsRef = useRef<HTMLElement[]>([]);
   
-  // Handle scroll animations
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
     
     const observer = new IntersectionObserver(
