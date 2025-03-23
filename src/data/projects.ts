@@ -28,6 +28,34 @@ export const projectData = [
     ]
   },
   {
+    id: "rag-customer-service",
+    title: "RAG-based customer service AI assistant in financial services",
+    coverPhoto: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    context: "Led the development of Thailand's first open-source LLM ecosystem, focusing on making AI technology accessible to Thai developers and businesses.",
+    problem: "Thailand lacked localized AI language models and tools, making it difficult for local developers to build Thai-language AI applications. Existing solutions were either too expensive or performed poorly with Thai language.",
+    solution: "Created an open-source ecosystem including pre-trained Thai language models, evaluation benchmarks, and developer tools. Focused on three key components: model development, data curation, and community building.",
+    whatIDid: [
+      "Led product strategy and roadmap development",
+      "Coordinated with research teams on model architecture and training",
+      "Managed community engagement and contribution guidelines",
+      "Developed evaluation metrics and benchmarking tools",
+      "Organized workshops and documentation for developers"
+    ],
+    results: [
+      "Successfully trained and released 3 Thai language models",
+      "Built a community of 500+ developers",
+      "Achieved 85% accuracy on Thai language tasks",
+      "Reduced development time for Thai AI applications by 60%"
+    ],
+    industry: "AI/ML, Open Source",
+    skills: ["Product Strategy", "Machine Learning", "Community Building", "Technical Leadership"],
+    images: [
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    ]
+  },
+  {
     id: "lingthai",
     title: "LingThai - Thai Dataset Registry & Annotation Platform",
     coverPhoto: "https://images.unsplash.com/photo-1518770660439-4636190af475",

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
@@ -23,17 +22,17 @@ const BeyondWorkSection = () => {
               From hiking through remote mountain trails to exploring bustling urban centers around the world, I'm always seeking new experiences that challenge my understanding and provide fresh insights.
             </p>
             <p>
-              I document my adventures and share travel tips through my blog, hoping to inspire others to step outside their comfort zones and discover the incredible diversity our world has to offer.
+              I love documenting my adventures and sharing experiences with others, hoping to inspire them to step outside their comfort zones and discover the incredible diversity our world has to offer.
             </p>
             
             <div className="pt-4">
-              <Button 
+              {/* <Button 
                 as={Link} 
                 to="/blog"
                 rightIcon={<ArrowRight size={16} />}
               >
                 Visit My Travel Blog
-              </Button>
+              </Button> */}
             </div>
           </div>
           

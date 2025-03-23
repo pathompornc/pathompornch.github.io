@@ -54,14 +54,14 @@ const Header: React.FC = () => {
           >
             Projects
           </NavLink>
-          <NavLink 
+          {/* <NavLink 
             to="/blog" 
             className={({ isActive }) => 
               isActive ? "nav-link nav-link-active" : "nav-link"
             }
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink 
             to="/about" 
             className={({ isActive }) => 
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
               >
                 Projects
               </NavLink>
-              <NavLink 
+              {/* <NavLink 
                 to="/blog" 
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) => 
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
                 }
               >
                 Blog
-              </NavLink>
+              </NavLink> */}
               <NavLink 
                 to="/about" 
                 onClick={() => setIsMenuOpen(false)}
