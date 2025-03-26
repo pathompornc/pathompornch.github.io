@@ -5,7 +5,7 @@ interface ExperienceCardProps {
   company: string;
   position: string;
   period: string;
-  description: string[];
+  description: string;
   logo?: string;
 }
 
@@ -31,12 +31,8 @@ const ExperienceCard = ({ company, position, period, description, logo }: Experi
             <span>{period}</span>
           </div>
           
-          <div className="mt-4 space-y-2">
-            {description.map((item, index) => (
-              <p key={index} className="text-muted-foreground">
-                {item}
-              </p>
-            ))}
+          <div className="mt-4">
+            <p className="text-muted-foreground">{description}</p>
           </div>
         </div>
       </div>

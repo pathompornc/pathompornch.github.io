@@ -5,6 +5,7 @@ interface EducationCardProps {
   school: string;
   degree: string;
   period: string;
+  major?: string;
   extracurriculars?: string[];
   awards?: string[];
   logo?: string;
@@ -14,6 +15,7 @@ const EducationCard = ({
   school, 
   degree, 
   period, 
+  major,
   extracurriculars, 
   awards,
   logo 
@@ -34,6 +36,7 @@ const EducationCard = ({
         <div className="flex-1">
           <h3 className="text-xl font-medium">{school}</h3>
           <p className="text-primary">{degree}</p>
+          {major && <p className="text-sm text-primary-foreground">{major}</p>}
           <p className="text-sm text-muted-foreground mt-1">{period}</p>
           
           {(extracurriculars && extracurriculars.length > 0) && (

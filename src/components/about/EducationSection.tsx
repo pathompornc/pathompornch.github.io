@@ -20,7 +20,7 @@ const EducationSection = () => {
               school={education.school}
               degree={education.degree}
               period={education.period}
-              extracurriculars={education.extracurriculars}
+              major={education.major}
               awards={education.awards}
               logo={education.logo}
             />

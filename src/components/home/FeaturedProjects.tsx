@@ -22,8 +22,7 @@ const FeaturedProjects = () => {
               <ProjectCard 
                 id={project.id}
                 title={project.title}
-                company={project.company}
-                logo={project.logo}
+                coverPhoto={project.coverPhoto}
                 description={project.context.substring(0, 150) + '...'}
                 industry={project.industry}
                 skills={project.skills}
